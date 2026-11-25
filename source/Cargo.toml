@@ -1,0 +1,15 @@
+[package]
+name = "turbo_sim"
+version = "1.0.1"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+mod-api-stable = { path = "../mod-api-stable" }
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
